@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="singleShow" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8faa835-5873-44f7-a3d9-f7fdceb5d33d">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="bookTitle" class="java.lang.String"/>
+	<field name="bookAuthority" class="java.lang.String"/>
+	<field name="createdDate" class="java.util.Date"/>
+	<field name="reportFooter" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40">
+			<staticText>
+				<reportElement x="19" y="3" width="536" height="37" uuid="4b63c3cd-d6e9-4448-89b6-fa50c85d414b"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Book Information]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="28" width="555" height="1" uuid="2b18aaac-020e-48f8-aba3-0afd6dc21306"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="163" height="22" uuid="74b83b4f-3b91-4aaf-a26b-b0cb402bcd71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="1" width="170" height="22" uuid="4c8162db-8e39-47fb-b1a2-f478c01fb95d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Authority]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="192" height="22" uuid="f5932de8-0a65-4953-8b78-379db56f64d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="163" height="15" uuid="fcbf3717-3eef-4ce0-9932-b66bd0e2430c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bookTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="2" width="170" height="14" uuid="2eee436a-670d-45c2-9e19-d8473c27c7c1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{bookAuthority}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="222" height="13" uuid="de8f3b67-4f59-4d88-b73b-45083a9ccb47"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{createdDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="26" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="2a243eaf-1470-437e-acd6-c5f4e798bad4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="233" y="1" width="100" height="20" uuid="ac002eb8-0487-4c5b-9910-81421f7aa25f"/>
+			</textField>
+			<textField>
+				<reportElement x="257" y="1" width="100" height="20" uuid="5ef1cc4a-3752-4034-9b5e-cf002e4cd29f"/>
+				<textFieldExpression><![CDATA[$F{reportFooter}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
